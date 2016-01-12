@@ -8,3 +8,35 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+li {
+  list-style-type: none;
+  float: left;
+}
+
+#checkbox_yoda, #checkbox_trooper, #checkbox_vader {
+  display: none;
+}
+
+#checkbox_yoda + label, #checkbox_trooper + label, #checkbox_vader + label {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+}
+
+#checkbox_yoda + label {
+  background: url("/images/yoda.png");
+}
+
+#checkbox_trooper + label {
+  background: url("/images/trooper.png");
+}
+
+#checkbox_vader + label {
+  background: url("/images/vader.png");
+}
+
+label {
+  text-indent: 100%;
+  overflow: hidden;
+}
