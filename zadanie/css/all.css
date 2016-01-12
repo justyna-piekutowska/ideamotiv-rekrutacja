@@ -2,41 +2,50 @@ html, body {
   height: 100%;
 }
 
-.characters {
+ul {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 li {
   list-style-type: none;
-  float: left;
 }
 
 #checkbox_yoda, #checkbox_trooper, #checkbox_vader {
   display: none;
 }
 
-#checkbox_yoda + label, #checkbox_trooper + label, #checkbox_vader + label {
+.characters input[type = "checkbox"] + label {
   display: inline-block;
-  height: 250px;
-  width: 250px;
+  height: 244px;
+  width: 244px;
+  margin: 0 4px 0 0;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 #checkbox_yoda + label {
-  background: url("/images/yoda.png");
+  background: center url("/images/yoda.png");
 }
 
 #checkbox_trooper + label {
-  background: url("/images/trooper.png");
+  background: center url("/images/trooper.png");
 }
 
 #checkbox_vader + label {
-  background: url("/images/vader.png");
+  background: center url("/images/vader.png");
 }
 
 label {
   text-indent: 100%;
   overflow: hidden;
+}
+
+.characters input[type = "checkbox"]:checked + label {
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 20px;
 }
