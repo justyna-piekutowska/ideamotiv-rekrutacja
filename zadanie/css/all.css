@@ -17,42 +17,51 @@ ul {
 
 li {
   list-style-type: none;
+  margin: 0 2px;
 }
 
 #checkbox_yoda, #checkbox_trooper, #checkbox_vader {
   display: none;
 }
 
-.characters input[type = "checkbox"] + label {
-  display: inline-block;
-  height: 244px;
-  width: 244px;
-  margin: 0 4px 0 0;
-  border-width: 3px;
-  border-style: solid;
-  border-color: transparent;
-}
-
 #checkbox_yoda + label {
-  background: center url("/images/yoda.png");
+  background: url("/images/yoda.png") no-repeat;
 }
 
 #checkbox_trooper + label {
-  background: center url("/images/trooper.png");
+  background: url("/images/trooper.png") no-repeat;
 }
 
 #checkbox_vader + label {
-  background: center url("/images/vader.png");
+  background: url("/images/vader.png") no-repeat;
 }
 
-label {
+.characters input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  height: 244px;
+  width: 244px;
+  border: 3px solid white;
   text-indent: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.characters input[type = "checkbox"]:checked + label {
+.characters input[type="checkbox"]:checked + label {
   border-color: black;
-  border-width: 3px;
-  border-style: solid;
   border-radius: 20px;
+}
+
+.characters input[type="checkbox"] + label:hover:after {
+  position: absolute;
+  bottom: 0;
+  width: 244px;
+  border-radius: 0 0 17px 17px;
+  background-color: rgba(0,0,0,0.8);
+  padding: 12px 0 10px 0;
+  content: attr(data-sentence);
+  color: white;
+  text-align: center;
+  text-indent: 0;
+  font-size: 20px;
 }
