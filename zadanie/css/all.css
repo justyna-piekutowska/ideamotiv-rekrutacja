@@ -52,7 +52,7 @@ li {
   border-radius: 20px;
 }
 
-.characters input[type="checkbox"] + label:hover:after {
+.characters input[type="checkbox"] + label:hover::after {
   position: absolute;
   bottom: 0;
   width: 244px;
@@ -76,7 +76,7 @@ button {
   border-right: 40px solid white;
   background-color: black;
   color: #fee33d;
-  font-size: 29px;
+  font-size: 27px;
   font-weight: bold;
   text-align: center;
   line-height: 70px;
@@ -88,7 +88,7 @@ button:hover {
 }
 
 /* Button arrow */
-button:after {
+button::after {
   content: "";
   position: absolute;
   right: -40px;
@@ -97,6 +97,6 @@ button:after {
   border-color: transparent black;
 }
 
-button:hover:after {
+button:hover::after {
   border-color: transparent #fee33d;
 }
